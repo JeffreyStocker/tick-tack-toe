@@ -1,8 +1,9 @@
-var express = require("express")
+var express = require("express");
 var port = 8080;
+var app = express();
 
-express.use (express.static('./public'))
+app.use (express.static('./public'));
 
-var server = express.listen(port, () => {
+var server = app.listen(port, () => {
   console.log('Server Listening on Port', port)
-})
+});
